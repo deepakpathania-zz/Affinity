@@ -30,12 +30,14 @@
 		<!-- <div class="col-md-12 column"> -->
             <div>
                 <center>
-                    <img src="userfiles/avatars/<?php echo $rws['user_avatar'];?>" class="img-responsive profile-avatar">
+                    <img src="assets/img/user.png" class="img-responsive profile-avatar">
                 </center>
                 <h1 class="text-center profile-text profile-name"><?php echo $rws['user_firstname'];?> <?php echo $rws['user_lastname'];?></h1>
                 <h2 class="text-center profile-text profile-profession"><?php echo $rws['user_profession'];?></h2>
                 <br>
-                <div class="panel-group white" id="panel-profile">
+                <div class="panel-group white shadow" id="panel-profile" style="width: 90%;
+    margin-left: 6%;margin-top:-3%">
+                    <h1 style="text-align:center;padding-top:20px;padding-bottom:10px">About receiver</h1>
                     <div class="panel panel-default">
                         <div id="panel-element-info" class="panel-collapse collapse in">
                             <div class="panel-body">
@@ -50,6 +52,16 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p><?php echo $rws['user_shortbio'];?></p>
+                                    </div>
+<?php } ?>
+<?php
+    if ($rws['user_username']){
+?>   
+                                    <div class="col-md-4">
+                                        <p class="profile-details"><i class="fa fa-user"></i> Username</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_username'];?></p>
                                     </div>
 <?php } ?>
 <?php
@@ -69,7 +81,7 @@
                                         <p class="profile-details"><i class="fa fa-envelope"></i> Email</p>
                                     </div>
                                     <div class="col-md-8">                                    
-                                        <p><?php echo $rws['user_email'];?></p>
+                                        <p>Not available till match</p>
                                     </div>
 <?php } ?>
 <?php
@@ -97,13 +109,33 @@
                                     </div>
 <?php } ?>
 <?php
-    if ($rws['user_dob']){
+    if ($rws['user_organ']){
 ?>   
                                     <div class="col-md-4">
-                                        <p class="profile-details"><i class="fa fa-calendar"></i> Date of Birth</p>
+                                        <p class="profile-details"><i class="fa fa-medkit"></i>  Organ</p>
                                     </div>
                                     <div class="col-md-8">
-                                        <p><?php echo $rws['user_dob'];?></p>
+                                        <p><?php echo $rws['user_organ'];?></p>
+                                    </div>
+<?php } ?>
+<?php
+    if ($rws['user_blood_type']){
+?>   
+                                    <div class="col-md-4 column">
+                                        <p class="profile-details"><i class="fa fa-tint"></i> Blood gp</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_blood_type'];?></p>
+                                    </div>
+<?php } ?>
+<?php
+    if ($rws['user_waiting_time']){
+?>   
+                                    <div class="col-md-4 column">
+                                        <p class="profile-details"><i class="fa fa-clock"></i> Wait time</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_waiting_time'];?></p>
                                     </div>
 <?php } ?>
                                 </div>

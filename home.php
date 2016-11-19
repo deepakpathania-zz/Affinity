@@ -22,7 +22,7 @@
         });
     </script>
 <div class="container">
-    <br/>
+    <br/><br/>
     <div class="row clearfix">
         <div class="col-md-12">
             <h1 class="text-center" style="color:white">Welcome to your profile</h1>
@@ -37,7 +37,7 @@
                       <img src="assets/img/edit.png" alt="">
                       <div class="caption text-center">
                           <h4>
-                            <a href="edit-profile.php" style="color:#256b9b">Edit your profile</a>
+                            <a href="edit-profile.php" style="color:#256b9b"><b>Edit your profile</b></a>
                           </h4>
                       </div>
                   </div>
@@ -49,7 +49,7 @@
                       <img src="assets/img/users.png" alt="">
                       <div class="caption text-center">
                           <h4>
-                            <a href="all-users.php" style="color:#256b9b">View matching users</a>
+                            <a href="all-users.php" style="color:#256b9b"><b>View matching users</b></a>
                           </h4>
                       </div>
         </div>

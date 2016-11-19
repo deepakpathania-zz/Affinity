@@ -25,6 +25,7 @@
 
     <!-- InstaClick JavaScript -->
     <script src="assets/js/instantclick/instantclick.min.js" data-no-instant></script>
+    <script type="text/javascript" src="assets/js/bootstrap-tagsinput.js"></script>
 
     <!-- InstaClick Initialization-->
     <script data-no-instant>
