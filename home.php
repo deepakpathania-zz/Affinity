@@ -22,20 +22,37 @@
         });
     </script>
 <div class="container">
+    <br/>
     <div class="row clearfix">
         <div class="col-md-12">
-            <h1 class="text-center">Welcome to your profile</h1>
+            <h1 class="text-center" style="color:white">Welcome to your profile</h1>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <ul class="nav text-center">
-                <li><a href="edit-profile.php">Edit your profile</a></li>
-                <li><a href="all-users.php">View all users</a></li>
-                <li><a href="components/logout.php">Logout</a></li>
-                <li></li>
-                <li></li>
-            </ul>
+    </div>
+    <br/>
+    <div class="row clearfix">
+        <div class="col-md-1"></div>
+        <!-- <div class="col-md-5"><a href="edit-profile.php">Edit your profile</a></div> -->
+        <div class="col-md-5 card">
+                <div class="thumbnail member shadow">
+                      <img src="assets/img/edit.png" alt="">
+                      <div class="caption text-center">
+                          <h4>
+                            <a href="edit-profile.php" style="color:#256b9b">Edit your profile</a>
+                          </h4>
+                      </div>
+                  </div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-1"></div>
+        <!-- <div class="col-md-5"><a href="all-users.php">View all users</a></div> -->
+        <div class="col-md-5 card">
+                <div class="thumbnail member shadow">
+                      <img src="assets/img/users.png" alt="">
+                      <div class="caption text-center">
+                          <h4>
+                            <a href="all-users.php" style="color:#256b9b">View matching users</a>
+                          </h4>
+                      </div>
+        </div>
+        </div>
     </div>
 </div>

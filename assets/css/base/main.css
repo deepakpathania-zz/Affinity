@@ -33,7 +33,23 @@ p {
 .centered {
     text-align: center;
 }
-
+.thumbnail {
+  border: 0;
+  padding-top: 20px;
+}
+.thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 35%;
+}
+.card {
+    padding: 20px;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);*/
+    background: rgba(128, 128, 128, 0);
+    color: #000;
+    margin-top: 20px;
+    overflow: hidden;
+}
 /* Links */
 a {
     color: #3bc492;
