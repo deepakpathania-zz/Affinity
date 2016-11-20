@@ -35,8 +35,8 @@
                 <h1 class="text-center profile-text profile-name"><?php echo $rws['user_firstname'];?> <?php echo $rws['user_lastname'];?></h1>
                 <h2 class="text-center profile-text profile-profession"><?php echo $rws['user_profession'];?></h2>
                 <br>
-                <div class="panel-group white shadow" id="panel-profile" style="width: 90%;
-    margin-left: 6%;margin-top:-3%">
+            <div class="panel-group white shadow" id="panel-profile" style="width: 90%;
+                margin-left: 6%;margin-top:-3%">
                     <h1 style="text-align:center;padding-top:20px;padding-bottom:10px">About receiver</h1>
                     <div class="panel panel-default">
                         <div id="panel-element-info" class="panel-collapse collapse in">
@@ -143,6 +143,79 @@
                         </div>
                     </div>
                 </div>
+<br/><br/>
+
+        <div class="panel-group white shadow" id="panel-profile" style="width: 90%;
+                margin-left: 6%;margin-top:-3%">
+                    <h1 style="text-align:center;padding-top:20px;padding-bottom:10px">About donator</h1>
+                    <div class="panel panel-default">
+                        <div id="panel-element-info" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="col-md-8 column">
+                                    <p class="text-center profile-title"><i class="fa fa-info"></i> Basic</p>
+                                    <hr>
+<?php
+    if ($rws['user_blood_type_donor']){
+?>   
+                                    <div class="col-md-4">
+                                        <p class="profile-details"><i class="fa fa-tint"></i> Blood gp</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_blood_type_donor'];?></p>
+                                    </div>
+<?php } ?>
+<?php
+    if ($rws['user_organ_condition_donor']){
+?>   
+                                    <div class="col-md-4">
+                                        <p class="profile-details"><i class="fa fa-heart"></i> Condition</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_organ_condition_donor'];?></p>
+                                    </div>
+<?php } ?>
+                                </div>
+                                <div class="col-md-4 column">
+                                    <p class="text-center profile-title"><i class="fa fa-info"></i> Personal</p>
+                                    <hr>
+<?php
+    if ($rws['user_gender']){
+?>   
+                                    <div class="col-md-4">
+                                        <p class="profile-details"><i class="fa fa-user"></i> Gender</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_gender'];?></p>
+                                    </div>
+<?php } ?>
+<?php
+    if ($rws['user_organ_donor']){
+?>   
+                                    <div class="col-md-4">
+                                        <p class="profile-details"><i class="fa fa-medkit"></i>  Organ</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_organ_donor'];?></p>
+                                    </div>
+<?php } ?>
+
+<?php
+    if ($rws['user_waiting_time']){
+?>   
+                                    <div class="col-md-4 column">
+                                        <p class="profile-details"><i class="fa fa-clock"></i> Wait time</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><?php echo $rws['user_waiting_time'];?></p>
+                                    </div>
+<?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<br/><br/>
+
             </div>
 		<!-- </div> -->
 	</div>

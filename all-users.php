@@ -21,7 +21,7 @@
                                                                         <div class="panel panel-default">
                                                                             <div id="panel-element-<?php echo $rws['user_id']; ?>" class="panel-collapse collapse in">
                                                                                 <div class="panel-body">
-                                                                                    <div class="col-md-12 column" style="text-align:center;margin-left:10px;margin-top:5px">
+                                                                                    <div class="col-md-12 column" style="text-align:center;margin-left:10px;margin-top:10px">
                                                                                         <img src="assets/img/user.png" name="aboutme" class="img-responsive">                                  
                                                                                     </div>
                                                                                     <div class="col-md-12 column" style="text-align:center">
