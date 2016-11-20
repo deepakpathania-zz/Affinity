@@ -214,12 +214,8 @@
                         </div>
                     </div>
                 </div>
-<br/><br/>
 
             </div>
-    <div style="text-align: center;">
-        <button type="button" class=" shadow btn btn-info btn-lg quote">Find  matching  percentage!</button>
-    </div>
     <?php 
         $current_user = $_SESSION['user_username'];
         $profile_user = $rws['user_username'];
@@ -261,8 +257,35 @@
         }
         
     ?>
-<br/><br/>
-    <p><?php echo "p_user_organ" .$p_user_organ.  "c_user_organ" . $c_user_organ. " similarity : " .$similar; ?></p>
+<br/><br/><br/>
+<?php
+    if ($similar==-100){
+?>   
+            <div class="panel-group white shadow" style="width: 90%;
+                margin-left: 6%;margin-top:-3%; text-align:center">
+                <h4 style="color:red"><b>Not compatible at all.</b></h4>
+            </div>
+<?php } ?>
+<?php
+    if ($similar==0){
+?>   
+            <div class="panel-group white shadow" style="width: 90%;
+                margin-left: 6%;margin-top:-3%; text-align:center">
+                <h4 style="color:blue"><b>Partially Compatible</b></h4>
+            </div>
+<?php } ?>
+<?php
+    if ($similar>0){
+?>   
+            <div class="panel-group white shadow" style="width: 90%;
+                margin-left: 6%;margin-top:-3%; text-align:center">
+                <h4 style="color:green"><b>Compatible</b></h4>
+            </div>
+<?php } ?>
+
 		<!-- </div> -->
 	</div>
 </div>
+
+
+

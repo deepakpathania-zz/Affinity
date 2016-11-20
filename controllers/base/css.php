@@ -19,3 +19,4 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/base/main.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/sweetalert.css">
