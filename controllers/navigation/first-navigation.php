@@ -23,7 +23,7 @@
 	           </ul>
                 <form class="navbar-form navbar-left" role="search" method="post" autocomplete="off" action="search-result.php">
                     <div class="form-group">
-                        <input type="text" class="search form-control" id="searchbox" placeholder="Search for People" name="search-form"/><br />
+                        <input type="text" class="search form-control" id="searchbox" placeholder="Search among matched" name="search-form"/><br />
                         <div id="display"></div>
 				    </div> 
 				</form>

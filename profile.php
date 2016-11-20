@@ -217,6 +217,10 @@
 <br/><br/>
 
             </div>
+    <div style="text-align: center;">
+        <button type="button" class=" shadow btn btn-info btn-lg quote">Find  matching  percentage!</button>
+    </div>
+<br/><br/>
 		<!-- </div> -->
 	</div>
 </div>

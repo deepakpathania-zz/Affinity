@@ -29,7 +29,18 @@ p {
     line-height: 28px;
     margin-bottom: 0px;
 }
-
+.quote {
+    background-color: #666666 !important;
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 25px;
+    border-radius: 60px;
+    border: 2px solid black;
+    text-align: center;
+}
+.quote:hover {
+  border-color: white;
+}
 .centered {
     text-align: center;
 }
