@@ -3,7 +3,56 @@
 <?php include 'controllers/base/head.php' ?>
 <?php include 'controllers/navigation/first-navigation.php' ?> 
 <?php include 'controllers/base/style.php' ?>
+<?php 
+        $current_user = $_SESSION['user_username'];
+        $profile_user = $rws['user_username'];
+        include '_database/database.php';
+        $similar=0;
+        $status;
+        $sql = "SELECT * FROM user WHERE user_username = '$current_user'";
+        $result = mysqli_query($database,$sql) or die(mysqli_error($database));
+        $cws = mysqli_fetch_array($result);
+        $p_blood = $rws['user_blood_type_donor'];
+        $p_user_organ_con = $rws['user_organ_condition_donor'];
+        $p_user_organ = $rws['user_organ_donor'];
+        $p_wait = $rws['user_waiting_time_donor'];
+        $c_blood = $cws['user_blood_type'];
+        $c_user_organ_con = $cws['user_organ_condition'];
+        $c_user_organ = $cws['user_organ'];
+        $c_wait = $cws['user_waiting_time'];
+        if($p_user_organ==$c_user_organ) {
+        if($p_blood==$c_blood) {
+            $similar=$similar+2;
+        }
+        else {
+            $similar=$similar-1;
+        }
+        if($p_user_organ_con == $c_user_organ_con) {
+            $similar=$similar+1;
+        }
+        else {
+            $similar=$similar-1;
+        }
+        if($p_user_organ_con==$c_user_organ_con) {
+            $similar=$similar+1;
+        }
+        else {
+            $similar=$similar-1;
+        }
+    }
+        else {
+            $similar = -100;
+            $status = "Not compatible";
+        }
+    if($similar==0) {
+        $status = "Partially Compatible";
+    }
+    if($status>0) {
+        $status = "Compatible";
+    }
 
+        
+?>
 <?php 
     if($_GET["follow"]=="same"){
         $dialogue="Your can't follow yourself! ";
@@ -33,7 +82,7 @@
                 <center>
                     <img src="assets/img/user.png" class="img-responsive profile-avatar">
                 </center>
-                <h1 class="text-center profile-text profile-name"><?php echo $rws['user_firstname'];?> <?php echo $rws['user_lastname'];?></h1>
+                <h1 class="text-center profile-text profile-name"><?php echo $rws['user_id'];?></h1>
                 <h2 class="text-center profile-text profile-profession"><?php echo $rws['user_profession'];?></h2>
                 <br>
             <div class="panel-group white shadow" id="panel-profile" style="width: 90%;
